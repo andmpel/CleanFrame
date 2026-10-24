@@ -1,5 +1,40 @@
 # Development
 
+## Personal Q60R worktree
+
+This branch targets an independently owned QN55Q60RAFXZA (2019 Q60R), not The
+Frame. The owner's developer connection reports Tizen 5.0 and ARMv7. The
+official SDK's `tv-samsung-5.0` / `BasicEmptyProject` template generated package
+`WSCBUZMLip` and application `WSCBUZMLip.CleanFrame`; preserve these IDs for
+this installation. The manifest, device self-filter and identity checks use
+that identity. The native helper remains reference-only and must not be run
+for this installation.
+
+The personal build uses the owner's nine chosen installed-app IDs, including
+`evKhCgZelL.AmazonIgnitionLauncher2` for Prime Video. Art Mode is unavailable
+and omitted from Home controls. A one-time flex-gap probe enables margin and
+positioning fallbacks for the documented Chromium 63 engine. These source
+adaptations do not establish full physical compatibility. The owner confirmed
+the installed launcher renders correctly, its Samsung Home escape works and
+it can be reopened from Apps with the remote. The owner deferred testing all
+nine shortcut launches and broader remote navigation. Standby/restart
+persistence remains untested.
+
+The Windows SDK is installed outside this checkout. Do not use the
+reference Mac's `npm run package` or device scripts for this setup.
+Use the official installed CLI with the personal signing profile explicitly
+selected, and inspect the resulting widget before installing. Private paths,
+certificate verification and stage results are in ignored
+`.local/setup-record.json`. Samsung account sign-in and certificate passwords
+are entered by the owner, never embedded in source or command arguments.
+
+On Windows, preview with `python scripts\preview.py --public-fonts`.
+`npm run check` and the browser runner select the platform's Python command;
+`PYTHON` can override it. For browser checks in PowerShell use
+`$env:CLEANFRAME_PUBLIC_FONTS='1'; npm run check:browser`.
+The sections below describe the original reference installation unless stated
+otherwise.
+
 ## Browser preview
 
 Start with Node.js 22+ and Python 3.10+, then `npm ci`. These are the supported development baselines; lower versions have not been checked. Install Chromium once with `npx playwright install chromium` for the optional browser tools. Linux hosts may also need Playwright's documented system dependencies (`npx playwright install --with-deps chromium`).

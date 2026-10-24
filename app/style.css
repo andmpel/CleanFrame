@@ -573,6 +573,33 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000}
 .l-list .quiet-utils.is-text .u-label{max-width:330px}
 .l-list .quiet-utils.is-text .u-content{gap:0}
 
+/* Chromium 63 has grid gap, but no flex gap or inset shorthand. */
+.legacy-flex .caption,.legacy-flex .warn,.legacy-flex .utils,.legacy-flex .u,.legacy-flex .dock-empty,.legacy-flex .s-head,.legacy-flex .btn,.legacy-flex .gt .state,.legacy-flex .er-name .panel-content,.legacy-flex .eo .panel-content,.legacy-flex .settings-group,.legacy-flex .settings-group-copy,.legacy-flex .settings-overview-hint,.legacy-flex .er,.legacy-flex .er-name,.legacy-flex .eo,.legacy-flex .ed-order-break,.legacy-flex .msg-acts,.legacy-flex .u-content,.legacy-flex .setting-options,.legacy-flex .setting-choice,.legacy-flex .setting-copy,.legacy-flex .appearance-desc,.legacy-flex .wallpaper-preview-name{gap:0!important}
+.legacy-flex .warn>:not(:last-child),.legacy-flex .u>:not(:last-child),.legacy-flex .s-head>:not(:last-child),.legacy-flex .btn>:not(:last-child),.legacy-flex .msg-acts>:not(:last-child),.legacy-flex .u-content>:not(:last-child){margin-right:12px}
+.legacy-flex .utils>:not(:last-child),.legacy-flex .gt .state>:not(:last-child),.legacy-flex .er>:not(:last-child){margin-right:8px}
+.legacy-flex .quiet-utils>:not(:last-child),.legacy-flex .er-name>:not(:last-child),.legacy-flex .eo>:not(:last-child),.legacy-flex .er-name .panel-content>:not(:last-child),.legacy-flex .eo .panel-content>:not(:last-child){margin-right:20px}
+.legacy-flex .quiet-utils .u>:not(:last-child),.legacy-flex .quiet-utils .u-content>:not(:last-child){margin-right:10px}
+.legacy-flex .quiet-utils.is-icons>:not(:last-child),.legacy-flex .settings-overview-hint>:not(:last-child),.legacy-flex .setting-choice>:not(:last-child),.legacy-flex .appearance-desc>:not(:last-child){margin-right:16px}
+.legacy-flex .setting-choice.setting-back>:not(:last-child){margin-right:8px}
+.legacy-flex .setting-choice>.setting-swatch:not(:last-child),.legacy-flex .setting-choice>.wallpaper-thumb:not(:last-child){margin-right:24px}
+.legacy-flex .quiet-utils>.wall-keep:not(:last-child){margin-right:28px}
+.legacy-flex .eo .panel-content>.eo-text{margin-right:0}
+.legacy-flex .eo .panel-content>.eo-verb:not(:empty){padding-left:20px}
+.legacy-flex .settings-group>:not(:last-child){margin-right:32px}
+.legacy-flex .wallpaper-preview-name>:not(:last-child){margin-right:24px}
+.legacy-flex .quiet-utils.is-text>:not(:last-child){margin-right:28px}
+.legacy-flex .caption>:not(:last-child),.legacy-flex .settings-group-copy>:not(:last-child),.legacy-flex .setting-options>:not(:last-child),.legacy-flex .setting-copy>:not(:last-child){margin-bottom:4px}
+.legacy-flex .dock-empty>:not(:last-child){margin-bottom:20px}
+.legacy-flex .l-list .quiet-utils>:not(:last-child){margin-right:0;margin-bottom:0}
+.legacy-flex .is-horizontal .setting-options>:not(:last-child){margin-bottom:0;margin-right:12px}
+.legacy-flex .l-list .quiet-utils .u-content>:not(:last-child){margin-right:0;margin-left:17.9px}
+.legacy-flex .l-list .quiet-utils .u[data-action="util.settings"] .u-content>:not(:last-child){margin-left:18.9px}
+.legacy-flex .l-list .quiet-utils.is-both .u>:not(:last-child){margin-right:14px}
+.legacy-flex .l-list .quiet-utils.is-text .u-content>:not(:last-child){margin-right:0;margin-left:0}
+.legacy-flex .quiet-utils.is-icons .u-content>:not(:last-child),.legacy-flex .l-list .quiet-utils.is-icons .u[data-action] .u-content>:not(:last-child){margin-right:0;margin-left:0}
+.legacy-flex .ed-order-break::after{margin-left:16px}
+.legacy-flex .monogram span::after,.legacy-flex .native-icon img,.legacy-flex .m-tint .ph-plate::before,.legacy-flex .m-tint .mat::before,.legacy-flex .gt .panel-content,.legacy-flex .sc .panel-content,.legacy-flex .tile-content,.legacy-flex .appearance{left:0;top:0;right:0;bottom:0}
+
 /* Selected fonts affect Home only. Settings, editors and status retain Manrope. */
 .home{font-synthesis:none}
 .font-custom .home{font-family:var(--font-ui-family),sans-serif;font-weight:var(--font-ui-weight)}

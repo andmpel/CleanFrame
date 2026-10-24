@@ -1,5 +1,15 @@
 # Interaction behaviour — 0.6.1
 
+**Personal Q60R branch:** Home controls are All apps and Settings; Art Mode is
+omitted and its device adapter explicitly reports unsupported without sending
+a command. First-run shortcuts are Netflix, YouTube, Prime Video, Apple TV,
+Apple Music, Plex, Jellyfin, Hulu and Disney+, in that order, using IDs read
+from the owner's TV. Existing saved choices retain their order. Plex, Jellyfin
+and Hulu use their installed icons after catalogue discovery, or readable
+initials when an icon is unavailable. This is a manually opened launcher:
+physical Home and startup routing have not been changed. The Frame-specific
+behaviours below describe the reference build, not verified Q60R capabilities.
+
 ## Home
 
 - Dock: Left/Right scrolls the apps without wrapping. Up enters the top-right controls, starting with Art Mode or the last selected control. Left/Right moves between Art Mode, All apps and Settings. Down or Back returns to the selected app. The clock is at the top left.

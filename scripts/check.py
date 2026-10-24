@@ -10,8 +10,10 @@ manifest = XML.parse(app / 'config.xml').getroot()
 ns = {'w': 'http://www.w3.org/ns/widgets', 't': 'http://tizen.org/ns/widgets'}
 identity = manifest.find('t:application', ns)
 assert identity is not None, 'Missing application identity'
-assert identity.get('package') == 'nClrkHome1', 'Keep the installed package identity stable'
-assert identity.get('id') == 'nClrkHome1.FrameHome', 'Keep the installed application ID stable'
+assert identity.get('package') == 'WSCBUZMLip', 'Keep the personal SDK-generated package identity stable'
+assert identity.get('id') == 'WSCBUZMLip.CleanFrame', 'Keep the personal SDK-generated application ID stable'
+assert identity.get('required_version') == '5.0', 'Keep the reviewed Q60R platform target'
+assert ("var SELF = '" + identity.get('id') + "';") in (app / 'device.js').read_text(), 'Device self-filter identity differs'
 assert manifest.get('version') == json.loads((root / 'package.json').read_text())['version'], 'Manifest/package versions differ'
 for tag in ['content', 'icon']:
     node = manifest.find('w:' + tag, ns)
